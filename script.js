@@ -41,9 +41,62 @@ document.body.appendChild(input);
 document.body.appendChild(addItem);
 
 const addingItem = () => {
-
+    const num = document.querySelector("input").value
+    for (let i = 0; i < num; i++){
+        const li = document.createElement("li")
+        li.innerText = `item ${i+6}`
+        ul.appendChild(li)
+    }
+    input.value = ""
 }
-removeItem.addEventListener("click", addingItem);
+addItem.addEventListener("click", addingItem);
+// -------------------------7 uzd-------------------------
+const p = document.createElement("p")
+const changeText = document.createElement("button")
+changeText.innerText = "Change Text"
+p.innerText = "placeholder text"
+document.body.appendChild(p)
+document.body.appendChild(changeText)
+
+const textChanger = () => {
+    p.innerText = "The text has been changed";
+}
+changeText.addEventListener("click", textChanger)
+// ------------------------- 8 uzd-------------------------
+const someDiv = document.createElement("div");
+const toggleHighlight = document.createElement("button")
+
+someDiv.innerText = "some Text"
+toggleHighlight.innerText = "Toggle Highlight"
+someDiv.classList.add("box")
+
+document.body.appendChild(someDiv)
+document.body.appendChild(toggleHighlight)
+
+const changeProperties = () => {
+    someDiv.classList.toggle("highlight");
+}
+toggleHighlight.addEventListener("click", changeProperties)
+// ------------------------- 9 uzd-------------------------
+const addRow = document.createElement("button");
+addRow.innerText = "Add row";
+
+const table = document.createElement("table");
+const th = document.createElement("th")
+const tr = document.createElement("tr")
+const td = document.createElement("td")
+
+th.innerText = "Name"
+
+document.body.appendChild(addRow);
+document.body.appendChild(table);
+document.body.appendChild(tr);
+document.body.appendChild(th);
+document.body.appendChild(td);
+
+
+
+
 
 
 
